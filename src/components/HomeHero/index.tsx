@@ -20,7 +20,7 @@ function HomeHero() {
               Nome: <span className="blue">Agacy,</span>
             </div>
             <div>
-              Sobrenome: <span className="blue">Júnior</span>
+              Sobrenome: <span className="blue">Martins</span>
             </div>
             {'\u007D'}
           </CodeItem>
