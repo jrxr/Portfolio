@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import SectionTitle from '../SectionTitle';
-import ProjetoItem from './ProjetoItem';
+import ProjetoBox from './ProjetoBox';
 
 import { Container } from './styles';
 
@@ -10,19 +10,19 @@ function Projetos() {
       <SectionTitle title=" Projetos Desenvolvidos" />
 
       <section>
-        <ProjetoItem
+        <ProjetoBox
           img="https://jornaltribuna.com.br/wp-content/uploads/2021/11/homem-aranha-4-1170x720-1.jpg"
           title="Projeto 1"
           type="Website"
           slug="teste"
         />
-        <ProjetoItem
+        <ProjetoBox
           img="https://jornaltribuna.com.br/wp-content/uploads/2021/11/homem-aranha-4-1170x720-1.jpg"
           title="Projeto 2"
           type="Website"
           slug="teste"
         />
-        <ProjetoItem
+        <ProjetoBox
           img="https://jornaltribuna.com.br/wp-content/uploads/2021/11/homem-aranha-4-1170x720-1.jpg"
           title="Projeto 3"
           type="Website"
