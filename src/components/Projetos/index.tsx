@@ -7,7 +7,7 @@ import { Container } from './styles';
 function Projetos() {
   return (
     <Container>
-      <SectionTitle title="Projetos Desenvolvidos" />
+      <SectionTitle title=" Projetos Desenvolvidos" />
 
       <section>
         <ProjetoItem
@@ -24,8 +24,8 @@ function Projetos() {
         />
         <ProjetoItem
           img="https://jornaltribuna.com.br/wp-content/uploads/2021/11/homem-aranha-4-1170x720-1.jpg"
-          title="Projeto 1"
-          type="website"
+          title="Projeto 3"
+          type="Website"
           slug="teste"
         />
       </section>
