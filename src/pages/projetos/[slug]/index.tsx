@@ -56,7 +56,7 @@ export default function Projeto({ projeto }: ProjetoProps) {
 export const getStaticPaths: GetStaticPaths = async () => {
   const prismic = getPrismicClient();
   const projetos = await prismic.query([
-    Prismic.predicates.at('document.type', 'pro')
+    Prismic.predicates.at('document.type', 'projeto')
   ]);
 
   const paths = projetos.results.map(projeto => ({
@@ -75,7 +75,7 @@ export const getStaticProps: GetStaticProps = async context => {
   const prismic = getPrismicClient();
   const { slug } = context.params;
 
-  const response = await prismic.getByUID('pro', String(slug), {});
+  const response = await prismic.getByUID('projeto', String(slug), {});
 
   const projeto = {
     slug: response.uid,

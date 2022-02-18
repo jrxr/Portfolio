@@ -24,14 +24,17 @@ export default function Projetos({ projetos }: ProjetoProps) {
     <ProjetosContainer>
       <Head>
         <title>Projetos | Meu portfólio</title>
-        <meta name="description" content="Projetos desenvolvidos por mim!" />
+        <meta
+          name="description"
+          content="Aqui você encontra os projetos que eu desenvolvi."
+        />
         <meta property="og:image" content="/ogimage.png" />
         <meta property="og:image:secure_url" content="/ogimage.png" />
         <meta name="twitter:image" content="/ogimage.png" />
         <meta name="twitter:image:src" content="/ogimage.png" />
         <meta
           property="og:description"
-          content="Projetos desenvolvidos por mim!"
+          content="Aqui você encontra os projetos que eu desenvolvi."
         />
       </Head>
 
@@ -55,17 +58,17 @@ export const getStaticProps: GetStaticProps = async () => {
   const prismic = getPrismicClient();
 
   const projectResponse = await prismic.query(
-    [Prismic.Predicates.at('document.type', 'pro')],
+    [Prismic.Predicates.at('document.type', 'projeto')],
     { orderings: '[document.first_publication_date desc]' }
   );
 
   const projetos = projectResponse.results.map(projeto => ({
     slug: projeto.uid,
-    title: projeto.data.title || null,
-    type: projeto.data.type || null,
-    description: projeto.data.description || null,
-    link: projeto.data.link.url || null,
-    thumbnail: projeto.data.thumbnail.url || null
+    title: projeto.data.title,
+    type: projeto.data.type,
+    description: projeto.data.description,
+    link: projeto.data.link.url,
+    thumbnail: projeto.data.thumbnail.url
   }));
 
   return {
