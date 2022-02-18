@@ -76,11 +76,11 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const projetos = projectResponse.results.map(projeto => ({
     slug: projeto.uid,
-    title: projeto.data.title,
-    type: projeto.data.type,
-    description: projeto.data.description,
-    link: projeto.data.link.url,
-    thumbnail: projeto.data.thumbnail.url
+    title: projeto.data.title || null,
+    type: projeto.data.type || null,
+    description: projeto.data.description || null,
+    link: projeto.data.link.url || null,
+    thumbnail: projeto.data.thumbnail.url || null
   }));
 
   return {
