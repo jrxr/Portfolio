@@ -4,7 +4,7 @@ import picture from '../../assets/logo.png';
 
 function HomeHero() {
   return (
-    <Container>
+    <Container data-aos="fade-up">
       <img src={picture} alt="Logo" />
       <div>
         <TextContainer>
@@ -12,7 +12,7 @@ function HomeHero() {
           <h2>Seja Bem-vindo!</h2>
         </TextContainer>
         <InfosContainer>
-          <CodeItem>
+          <CodeItem data-aos="zoom-in">
             <span className="comment">//Minha apresentação</span>
             <span className="purple">Infos</span>
             {'\u007B'}
@@ -24,7 +24,7 @@ function HomeHero() {
             </div>
             {'\u007D'}
           </CodeItem>
-          <CodeItem>
+          <CodeItem data-aos="zoom-in">
             <span className="purple">Cargo</span>
             {'\u007B'}
             <div>

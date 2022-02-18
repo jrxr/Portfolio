@@ -4,30 +4,34 @@ import ProjetoBox from './ProjetoBox';
 
 import { Container } from './styles';
 
-function Projetos() {
+interface IProjeto {
+  slug: string;
+  title: string;
+  type: string;
+  description: string;
+  link: string;
+  thumbnail: string;
+}
+
+interface ProjetosProps {
+  projetos: IProjeto[];
+}
+
+function Projetos({ projetos }: ProjetosProps) {
   return (
     <Container>
       <SectionTitle title=" Projetos Desenvolvidos" />
 
       <section>
-        <ProjetoBox
-          img="https://jornaltribuna.com.br/wp-content/uploads/2021/11/homem-aranha-4-1170x720-1.jpg"
-          title="Projeto 1"
-          type="Website"
-          slug="teste"
-        />
-        <ProjetoBox
-          img="https://jornaltribuna.com.br/wp-content/uploads/2021/11/homem-aranha-4-1170x720-1.jpg"
-          title="Projeto 2"
-          type="Website"
-          slug="teste"
-        />
-        <ProjetoBox
-          img="https://jornaltribuna.com.br/wp-content/uploads/2021/11/homem-aranha-4-1170x720-1.jpg"
-          title="Projeto 3"
-          type="Website"
-          slug="teste"
-        />
+        {projetos.slice(0, 3).map(projeto => (
+          <ProjetoBox
+            key={projeto.slug}
+            img={projeto.thumbnail}
+            title={projeto.title}
+            type={projeto.type}
+            slug={projeto.slug}
+          />
+        ))}
       </section>
       <button type="button">
         <Link href="/projetos">
