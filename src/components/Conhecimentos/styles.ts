@@ -15,7 +15,7 @@ export const Container = styled.section`
       gap: 5rem;
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 800px) {
       gap: 3rem;
       flex-wrap: wrap;
       margin-top: 5rem;

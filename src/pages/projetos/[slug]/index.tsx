@@ -13,8 +13,8 @@ interface IProjeto {
   title: string;
   type: string;
   description: string;
-  link: string;
-  thumbnail: string;
+  link: { url: string };
+  thumbnail: string | any;
 }
 
 interface ProjetoProps {
@@ -46,7 +46,7 @@ export default function Projeto({ projeto }: ProjetoProps) {
       <main>
         <p>{projeto.description}</p>
         <button type="button">
-          <a href={projeto.link}>Ver projeto online</a>
+          <a href={projeto.link.url}>Ver projeto online</a>
         </button>
       </main>
     </ProjetoContainer>
@@ -75,15 +75,19 @@ export const getStaticProps: GetStaticProps = async context => {
   const prismic = getPrismicClient();
   const { slug } = context.params;
 
-  const response = await prismic.getByUID('projeto', String(slug), {});
+  const response = await prismic.getByUID<IProjeto>(
+    'projeto',
+    String(slug),
+    {}
+  );
 
   const projeto = {
     slug: response.uid,
     title: response.data.title,
     type: response.data.type,
     description: response.data.description,
-    link: response.data.link.url || null,
-    thumbnail: response.data.thumbnail.url || null
+    link: response.data.link.url,
+    thumbnail: response.data.thumbnail.url
   };
 
   return {

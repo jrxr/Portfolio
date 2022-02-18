@@ -60,20 +60,17 @@ export default function Form() {
         placeholder="Nome"
         value={nome}
         onChange={({ target }) => setNome(target.value)}
-        required
       />
       <Input
         placeholder="E-mail"
         type="email"
         value={email}
         onChange={({ target }) => setEmail(target.value)}
-        required
       />
       <TextArea
         placeholder="Mensagem"
         value={mensagem}
         onChange={({ target }) => setMensagem(target.value)}
-        required
       />
       <button type="submit" disabled={loading}>
         ENVIAR

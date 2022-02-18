@@ -11,8 +11,8 @@ interface IProjeto {
   title: string;
   type: string;
   description: string;
-  link: string;
-  thumbnail: string;
+  link: { url: string };
+  thumbnail: string | any;
 }
 
 interface ProjetoProps {
@@ -57,7 +57,7 @@ export default function Projetos({ projetos }: ProjetoProps) {
 export const getStaticProps: GetStaticProps = async () => {
   const prismic = getPrismicClient();
 
-  const projectResponse = await prismic.query(
+  const projectResponse = await prismic.query<IProjeto>(
     [Prismic.Predicates.at('document.type', 'projeto')],
     { orderings: '[document.first_publication_date desc]' }
   );

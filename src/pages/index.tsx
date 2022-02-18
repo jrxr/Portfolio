@@ -20,8 +20,8 @@ interface IProjeto {
   title: string;
   type: string;
   description: string;
-  link: string;
-  thumbnail: string;
+  link: { url: string };
+  thumbnail: string | any;
 }
 
 interface HomeProps {
@@ -69,7 +69,7 @@ export default function Home({ projetos }: HomeProps) {
 export const getStaticProps: GetStaticProps = async () => {
   const prismic = getPrismicClient();
 
-  const projectResponse = await prismic.query(
+  const projectResponse = await prismic.query<IProjeto>(
     [Prismic.Predicates.at('document.type', 'projeto')],
     { orderings: '[document.first_publication_date desc]' }
   );
@@ -79,8 +79,8 @@ export const getStaticProps: GetStaticProps = async () => {
     title: projeto.data.title,
     type: projeto.data.type,
     description: projeto.data.description,
-    link: projeto.data.link.url || null,
-    thumbnail: projeto.data.thumbnail.url || null
+    link: projeto.data.link,
+    thumbnail: projeto.data.thumbnail.url
   }));
 
   return {

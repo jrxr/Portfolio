@@ -9,7 +9,8 @@ interface IProjeto {
   title: string;
   type: string;
   description: string;
-  link: string;
+
+  link: { url: string };
   thumbnail: string;
 }
 
