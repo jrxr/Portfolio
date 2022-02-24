@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import { Container, TextContainer, InfosContainer, CodeItem } from './styles';
-import picture from '../../assets/logo.png';
+import picture from '../../assets/logo.gif';
 
 function HomeHero() {
   return (

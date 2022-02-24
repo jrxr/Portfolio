@@ -6,10 +6,10 @@ export const Container = styled.section`
   gap: 2rem;
   align-items: center;
   justify-content: center;
-  margin-top: 5rem;
+  margin-top: 4rem;
 
   > img {
-    width: 50rem;
+    width: 45rem;
     height: 50rem;
     flex: 1;
   }
@@ -43,6 +43,7 @@ export const Container = styled.section`
 `;
 
 export const TextContainer = styled.section`
+  margin-left: 2rem;
   margin-bottom: 2rem;
   width: 100%;
 
@@ -77,6 +78,7 @@ export const TextContainer = styled.section`
 `;
 
 export const InfosContainer = styled.section`
+  margin-left: 2rem;
   width: 100%;
   display: flex;
   flex-direction: column;
