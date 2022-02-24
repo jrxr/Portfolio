@@ -14,6 +14,7 @@ interface IProjeto {
   type: string;
   description: string;
   link: { url: string };
+  github: { url: string };
   thumbnail: string | any;
 }
 
@@ -45,8 +46,11 @@ export default function Projeto({ projeto }: ProjetoProps) {
       />
       <main>
         <p>{projeto.description}</p>
+        <button type="submit">
+          <a href={`${projeto.link}`}>Ver projeto online</a>
+        </button>
         <button type="button">
-          <a href={projeto.link.url}>Ver projeto online</a>
+          <a href={`${projeto.github}`}>Ver código projeto</a>
         </button>
       </main>
     </ProjetoContainer>
@@ -87,6 +91,7 @@ export const getStaticProps: GetStaticProps = async context => {
     type: response.data.type,
     description: response.data.description,
     link: response.data.link.url,
+    github: response.data.github.url,
     thumbnail: response.data.thumbnail.url
   };
 

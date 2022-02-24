@@ -22,11 +22,11 @@ export const ProjetoContainer = styled.div`
 
     button {
       background: ${({ theme }) => theme.primary};
-      padding: 0.8rem 3rem;
-      border-radius: 0.5rem;
+      padding: 1rem 2rem;
+      border-radius: 1rem;
       border: none;
       transition: 0.5s;
-      margin-top: 2rem;
+      margin: 2rem 0 0 2rem;
 
       &:hover {
         background: ${({ theme }) => darken(0.05, theme.primary)};

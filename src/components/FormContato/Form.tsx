@@ -1,4 +1,4 @@
-import { FormEvent, useState } from 'react';
+import { useState } from 'react';
 import toast from 'react-hot-toast';
 import { sendContactMail } from '../../services/sendMail';
 import theme from '../../styles/theme';
@@ -11,12 +11,10 @@ export default function Form() {
 
   const [loading, setLoading] = useState(false);
 
-  async function handleSubmit(event: FormEvent) {
+  async function handleSubmit(event) {
     event.preventDefault();
 
-    if (loading) return;
-
-    if (!nome.trim() || !email.trim() || !mensagem.trim()) {
+    if (!nome || !email || !mensagem) {
       toast('Preencha todos os campos para enviar sua mensagem!', {
         style: {
           background: theme.error,
@@ -39,16 +37,13 @@ export default function Form() {
           color: '#fff'
         }
       });
-    } catch (err) {
-      toast(
-        'Ocorreu um erro ao tentar enviar sua mensagem. Por favor, tente novamente!',
-        {
-          style: {
-            background: theme.error,
-            color: '#fff'
-          }
+    } catch (error) {
+      toast('Ocorreu um erro ao tentar enviar sua mensagem. Tente novamente!', {
+        style: {
+          background: theme.error,
+          color: '#fff'
         }
-      );
+      });
     } finally {
       setLoading(false);
     }
