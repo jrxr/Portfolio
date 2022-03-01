@@ -32,7 +32,7 @@ function HomeHero() {
               <span className="blue"> Developer Front-end and Mobile,</span>
             </div>
             <div>
-              Cidade: <span className="blue">Distrito Federal 🇧🇷</span>
+              Nível: <span className="blue">Júnior</span>
             </div>
             {'\u007D'}
           </CodeItem>

@@ -11,7 +11,7 @@ interface ProjetoProps {
 
 export default function ProjetoBox({ title, type, slug, img }: ProjetoProps) {
   return (
-    <ProjetoContainer imgUrl={img} data-aos="fade-up">
+    <ProjetoContainer imgUrl={img} data-aos="flip-up">
       <section>
         <div className="overlay" />
         <div className="text">
