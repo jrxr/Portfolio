@@ -13,7 +13,7 @@ interface IProjeto {
   title: string;
   type: string;
   description: string;
-  link: { url: string };
+  link: { url: string | undefined };
   github: { url: string };
   thumbnail: string | any;
 }
@@ -49,6 +49,7 @@ export default function Projeto({ projeto }: ProjetoProps) {
         <button type="submit">
           <a href={`${projeto.link}`}>Ver projeto online</a>
         </button>
+
         <button type="button">
           <a href={`${projeto.github}`}>Ver código projeto</a>
         </button>
