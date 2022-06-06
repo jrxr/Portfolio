@@ -25,7 +25,7 @@ export default function Form() {
       return;
     }
     const url = process.env.NEXT_PUBLIC_DISCORD_WEBHOOK;
-    console.log(url);
+
     const messageData = {
       embeds: [
         {
