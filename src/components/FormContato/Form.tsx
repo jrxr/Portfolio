@@ -5,8 +5,6 @@ import toast from 'react-hot-toast';
 import theme from '../../styles/theme';
 import { FormContainer, Input, TextArea } from './styles';
 
-const url = process.env.REACT_APP_DISCORD_WEBHOOK;
-
 export default function Form() {
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
@@ -26,7 +24,8 @@ export default function Form() {
       });
       return;
     }
-
+    const url = process.env.NEXT_PUBLIC_DISCORD_WEBHOOK;
+    console.log(url);
     const messageData = {
       embeds: [
         {
