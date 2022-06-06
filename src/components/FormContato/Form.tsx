@@ -1,16 +1,16 @@
 import axios from 'axios';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
+
 import theme from '../../styles/theme';
 import { FormContainer, Input, TextArea } from './styles';
+
+const url = process.env.REACT_APP_DISCORD_WEBHOOK;
 
 export default function Form() {
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [mensagem, setMensagem] = useState('');
-
-  const url =
-    'https://discord.com/api/webhooks/981657670819934279/DJebLyih0xWj4p_ZCxMd8E8Zw7P67u8QT8xyVj43bY1wvWTrUIdtEIlIYlZrSvia8b6a';
 
   const [loading, setLoading] = useState(false);
 

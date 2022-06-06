@@ -46,6 +46,31 @@ export default function Projeto({ projeto }: ProjetoProps) {
       />
       <main>
         <p>{projeto.description}</p>
+
+        {projeto.type === 'App' ? (
+          <>
+            <br />
+            <p>
+              Primeiramente antes de ver o aplicativo seu dispositivo precisa
+              ter instalado o aplicativo chamado expo, segue abaixo os link das
+              lojas pra download, assim que baixar o expo, acesse o aplicativo
+              dessa página.
+            </p>
+            <br />
+            <p>
+              <a href="https://apps.apple.com/br/app/expo-go/id982107779">
+                App Story
+              </a>
+              {'  '}|{'  '}
+              <a href="https://play.google.com/store/apps/details?id=host.exp.exponent&hl=pt_BR&gl=US">
+                Play Store
+              </a>
+            </p>
+          </>
+        ) : (
+          <></>
+        )}
+
         <button type="submit">
           <a href={`${projeto.link}`}>Ver projeto online</a>
         </button>

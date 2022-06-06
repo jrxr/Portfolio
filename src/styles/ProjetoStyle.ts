@@ -20,6 +20,17 @@ export const ProjetoContainer = styled.div`
       text-align: justify;
     }
 
+    a {
+      color: ${({ theme }) => theme.secondary};
+      font-size: 1.5rem;
+      font-weight: 300;
+      text-align: justify;
+    }
+
+    a:hover {
+      color: ${({ theme }) => theme.primary};
+    }
+
     button {
       background: ${({ theme }) => theme.primary};
       padding: 1rem 2rem;

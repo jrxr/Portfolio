@@ -75,7 +75,7 @@ export const TextArea = styled.textarea`
   background: ${({ theme }) => theme.inputBackground};
   border: 1px solid ${({ theme }) => theme.border};
   padding: 1.7rem 1.5rem;
-  color: ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.secondary};
   border-radius: 0.5rem;
   font-size: 1.2rem;
   outline: none;
