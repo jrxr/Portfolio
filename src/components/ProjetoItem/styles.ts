@@ -27,16 +27,24 @@ export const Container = styled.div<ContainerProps>`
       > div.overlay {
         opacity: 0.5;
       }
+      > section {
+        h1 {
+          color: ${({ theme }) => theme.secondary};
+        }
+        h2 {
+          color: ${({ theme }) => theme.secondary};
+        }
+      }
     }
 
     > section {
       z-index: 2;
       h1 {
-        color: ${({ theme }) => theme.primary};
+        color: ${({ theme }) => theme.textLight};
         font-size: 1.5rem;
       }
       h2 {
-        color: ${({ theme }) => theme.primary};
+        color: ${({ theme }) => theme.textLight};
         font-size: 1rem;
         font-weight: 300;
       }

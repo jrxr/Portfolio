@@ -28,11 +28,12 @@ export const ProjetoContainer = styled.div`
     }
 
     a:hover {
-      color: ${({ theme }) => theme.primary};
+      color: ${({ theme }) => theme.success};
     }
 
     button {
       background: ${({ theme }) => theme.primary};
+      color: ${({ theme }) => theme.textLight};
       padding: 1rem 2rem;
       border-radius: 1rem;
       border: none;

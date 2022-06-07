@@ -17,11 +17,11 @@ export const Container = styled.div<ContainerProps>`
   section {
     z-index: 2;
     h1 {
-      color: ${({ theme }) => theme.primary};
+      color: ${({ theme }) => theme.textLight};
       font-size: 3rem;
     }
     h2 {
-      color: ${({ theme }) => theme.secondary};
+      color: ${({ theme }) => theme.textLight};
       font-weight: 300;
       font-size: 2rem;
     }
