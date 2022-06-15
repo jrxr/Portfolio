@@ -5,7 +5,7 @@ import Header from '../../components/Header';
 import ProjetoItem from '../../components/ProjetoItem';
 import { getPrismicClient } from '../../services/prismic';
 import { ProjetosContainer } from '../../styles/ProjetosStyles';
-import picture from '../../assets/logo2.gif';
+import picture from '../../assets/Logo2.gif';
 import ProjetoProgress from '../../components/ProjetoProgress';
 
 interface IProjeto {
