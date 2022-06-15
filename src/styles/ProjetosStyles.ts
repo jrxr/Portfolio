@@ -14,6 +14,12 @@ export const ProjetosContainer = styled.div`
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
 
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 2rem;
+    }
+
     @media (max-width: 1000px) {
       grid-template-columns: 1fr 1fr;
     }

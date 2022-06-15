@@ -10,7 +10,8 @@ const theme = {
   border: '#313958',
   inputBackground: '#1E253E',
   success: '#14C38E',
-  error: '#d45d5d'
+  error: '#d45d5d',
+  mario: '#FBD000'
 };
 
 export default theme;

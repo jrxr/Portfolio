@@ -5,6 +5,8 @@ import Header from '../../components/Header';
 import ProjetoItem from '../../components/ProjetoItem';
 import { getPrismicClient } from '../../services/prismic';
 import { ProjetosContainer } from '../../styles/ProjetosStyles';
+import picture from '../../assets/logo2.gif';
+import ProjetoProgress from '../../components/ProjetoProgress';
 
 interface IProjeto {
   slug: string;
@@ -40,6 +42,12 @@ export default function Projetos({ projetos }: ProjetoProps) {
 
       <Header />
       <main className="container">
+        <ProjetoProgress
+          slug="#"
+          title="Mais projetos "
+          type="em breve"
+          imgUrl={picture}
+        />
         {projetos.map(projeto => (
           <ProjetoItem
             key={projeto.slug}
