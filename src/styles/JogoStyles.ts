@@ -46,7 +46,7 @@ export const OverlayContent = styled.div`
   height: 60%;
 
   border-radius: 10px;
-  background: url('./assets/overlay-background.png') center center;
+  background: url('../assets/overlay-background.png') center center;
   background-size: contain;
 
   overflow: hidden;

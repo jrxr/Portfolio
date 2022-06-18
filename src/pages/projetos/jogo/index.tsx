@@ -18,11 +18,11 @@ import {
   Title,
   ContainerTitle
   // Music
-} from './styles';
+} from '../../../styles/JogoStyles';
 
-import MarioImg from './assets/mario.gif';
-import CloudImg from './assets/clouds.png';
-import PipeImg from './assets/pipe.png';
+import MarioImg from '../../../assets/mario.gif';
+import CloudImg from '../../../assets/clouds.png';
+import PipeImg from '../../../assets/pipe.png';
 
 export default function jogo() {
   return (
