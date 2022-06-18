@@ -16,8 +16,8 @@ import {
   Score,
   StartGame,
   Title,
-  ContainerTitle
-  // Music
+  ContainerTitle,
+  Music
 } from '../../../styles/JogoStyles';
 
 import MarioImg from '../../../assets/mario.gif';
@@ -32,6 +32,7 @@ export default function jogo() {
         <Title>
           Enquanto aguarda os novos projetos, divirta-se com esse jogo do mario!
         </Title>
+        <Music autoPlay src="/music.mp3" />
       </ContainerTitle>
       <Overlay>
         <OverlayContent>
