@@ -20,9 +20,9 @@ import {
   Music
 } from '../../../styles/JogoStyles';
 
-import MarioImg from '../../../assets/mario.gif';
-import CloudImg from '../../../assets/clouds.png';
-import PipeImg from '../../../assets/pipe.png';
+import MarioImg from '../../../../public/assets/mario.gif';
+import CloudImg from '../../../../public/assets/clouds.png';
+import PipeImg from '../../../../public/assets/pipe.png';
 
 export default function jogo() {
   return (
@@ -34,29 +34,37 @@ export default function jogo() {
         </Title>
         <Music autoPlay src="/music.mp3" />
       </ContainerTitle>
-      <Overlay>
+      <Overlay className="Overlay">
         <OverlayContent>
           <OverlayTitle>
             <h1>Mario Game</h1>
-            <OverlayScore>Seu score 0</OverlayScore>
+            <OverlayScore className="OverlayScore">Seu score 0</OverlayScore>
           </OverlayTitle>
 
           <OverlayButtons>
-            <ResetButton>Reiniciar</ResetButton>
+            <ResetButton className="ResetButton">Reiniciar</ResetButton>
           </OverlayButtons>
         </OverlayContent>
       </Overlay>
 
       <Content>
-        <Score>SCORE 0</Score>
-        <StartGame />
+        <Score className="Score">SCORE 0</Score>
+        <StartGame className="StartGame" />
         <Clouds src={CloudImg} alt="pixel arte de nuvens" />
 
         <CloudsTwo src={CloudImg} alt="pixel arte de nuvens" />
 
-        <Mario src={MarioImg} alt="pixel arte do personagem mario caminhando" />
+        <Mario
+          className="Mario"
+          src={MarioImg}
+          alt="pixel arte do personagem mario caminhando"
+        />
 
-        <Pipe src={PipeImg} alt="pixel arte de um tubo de encanação verde" />
+        <Pipe
+          className="Pipe"
+          src={PipeImg}
+          alt="pixel arte de um tubo de encanação verde"
+        />
       </Content>
     </Container>
   );

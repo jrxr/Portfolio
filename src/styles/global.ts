@@ -51,4 +51,57 @@ export default createGlobalStyle`
       padding: 0 2rem;
     }
   }
+
+  .pipeRun {
+    animation: pipe-animate 1.5s infinite linear;
+  }
+
+  @keyframes pipe-animate {
+    from {
+      right: -70px;
+    }
+    to {
+      right: 1250px;
+    }
+  }
+
+  .jump {
+    animation: mario-jump 500ms linear;
+  }
+
+  .dead {
+    animation: mario-dead 1s linear;
+  }
+
+  @keyframes mario-jump {
+    0% {
+      bottom: 0;
+    }
+    40% {
+      bottom: 120px;
+    }
+    50% {
+      bottom: 120px;
+    }
+    60% {
+      bottom: 120px;
+    }
+    100% {
+      bottom: 0;
+    }
+  }
+
+  @keyframes mario-dead {
+    0% {
+      bottom: 0;
+    }
+
+    50% {
+      bottom: 120px;
+    }
+
+    100% {
+      bottom: -200px;
+    }
+  }
 `;

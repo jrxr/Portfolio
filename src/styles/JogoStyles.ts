@@ -24,7 +24,7 @@ export const Music = styled.audio``;
 
 export const Title = styled.h1`
   color: ${({ theme }) => theme.mario};
-  font-size: 1.96rem;
+  font-size: 2.1rem;
 `;
 
 export const Overlay = styled.div`
@@ -42,11 +42,11 @@ export const Overlay = styled.div`
 
 export const OverlayContent = styled.div`
   position: relative;
-  width: 60%;
-  height: 60%;
+  width: 50%;
+  height: 40%;
 
-  border-radius: 10px;
-  background: url('../assets/overlay-background.png') center center;
+  border-radius: 25px;
+  background: url('/assets/overlay-background.png') center center;
   background-size: contain;
 
   overflow: hidden;
@@ -81,8 +81,15 @@ export const ResetButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 70%;
+  border: none;
+  padding: 1rem 2.5rem;
+  color: #000;
+  font-weight: 300;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  background: ${({ theme }) => theme.mario};
+  transition: 0.5s;
+  width: fit-content;
 `;
 
 export const Score = styled.h2`
@@ -176,63 +183,10 @@ export const Pipe = styled.img`
   width: 65px;
   bottom: 0;
   right: 10px;
-
-  .pipeRun {
-    animation: pipe-animate 1.5s infinite linear;
-  }
-
-  @keyframes pipe-animate {
-    from {
-      right: -70px;
-    }
-    to {
-      right: 1250px;
-    }
-  }
 `;
 
 export const Mario = styled.img`
   position: absolute;
   width: 150px;
   bottom: 0;
-
-  .jump {
-    animation: mario-jump 500ms linear;
-  }
-
-  .dead {
-    animation: mario-dead 1s linear;
-  }
-
-  @keyframes mario-jump {
-    0% {
-      bottom: 0;
-    }
-    40% {
-      bottom: 120px;
-    }
-    50% {
-      bottom: 120px;
-    }
-    60% {
-      bottom: 120px;
-    }
-    100% {
-      bottom: 0;
-    }
-  }
-
-  @keyframes mario-dead {
-    0% {
-      bottom: 0;
-    }
-
-    50% {
-      bottom: 120px;
-    }
-
-    100% {
-      bottom: -200px;
-    }
-  }
 `;
