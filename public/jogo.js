@@ -12,8 +12,8 @@ let timerVerifyDead;
 let timerScore;
 let timerSpeed;
 
-startGameInfo.innerHTML =
-  'Pressione qualquer tecla para iniciar <br/> O tempo é contabilizado a cada segundo';
+// startGameInfo.innerHTML =
+//   'Pressione qualquer tecla para iniciar <br/> O tempo é contabilizado a cada segundo';
 
 reset.addEventListener('click', () => window.location.reload());
 
@@ -55,14 +55,13 @@ const handleLogicForGameOver = () => {
     .bottom.replace('px', '');
 
   if (
-    pipeLocalization <= 120 &&
+    pipeLocalization <= 110 &&
     pipeLocalization > 0 &&
-    marioLocalization < 80
+    marioLocalization < 110
   ) {
     pipe.style.animation = '';
     pipe.style.left = `${pipeLocalization}px`;
 
-    mario.src = './assets/game-over.png';
     mario.style.marginLeft = '50px';
     mario.style.bottom = `-200px`;
     mario.style.width = '80px';

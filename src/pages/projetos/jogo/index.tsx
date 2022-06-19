@@ -48,7 +48,10 @@ export default function jogo() {
       </Overlay>
 
       <Content>
-        <Score className="Score">SCORE 0</Score>
+        <Score className="Score">
+          SCORE 0 - Pressione alguma tecla pra começar, em caso de erro atualize
+          a página.
+        </Score>
         <StartGame className="StartGame" />
         <Clouds src={CloudImg} alt="pixel arte de nuvens" />
 

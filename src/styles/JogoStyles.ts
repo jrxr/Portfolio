@@ -42,8 +42,8 @@ export const Overlay = styled.div`
 
 export const OverlayContent = styled.div`
   position: relative;
-  width: 50%;
-  height: 40%;
+  width: 70%;
+  height: 50%;
 
   border-radius: 25px;
   background: url('/assets/overlay-background.png') center center;
