@@ -49,8 +49,8 @@ export default function jogo() {
 
       <Content>
         <Score className="Score">
-          SCORE 0 - Pressione alguma tecla pra começar, em caso de erro atualize
-          a página.
+          SCORE 0 - Clique na tela pra começar, em caso de erro atualize a
+          página.
         </Score>
         <StartGame className="StartGame" />
         <Clouds src={CloudImg} alt="pixel arte de nuvens" />

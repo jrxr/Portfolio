@@ -17,7 +17,7 @@ let timerSpeed;
 
 reset.addEventListener('click', () => window.location.reload());
 
-window.addEventListener('keypress', () => {
+window.addEventListener('click', () => {
   pipe.classList.add('pipeRun');
   mario.classList.add('jump');
 

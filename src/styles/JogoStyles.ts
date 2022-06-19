@@ -24,7 +24,7 @@ export const Music = styled.audio``;
 
 export const Title = styled.h1`
   color: ${({ theme }) => theme.mario};
-  font-size: 2.1rem;
+  font-size: 1.9rem;
 `;
 
 export const Overlay = styled.div`
