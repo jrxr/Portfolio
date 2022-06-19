@@ -55,7 +55,7 @@ const handleLogicForGameOver = () => {
     .bottom.replace('px', '');
 
   if (
-    pipeLocalization <= 110 &&
+    pipeLocalization <= 5 &&
     pipeLocalization > 0 &&
     marioLocalization < 110
   ) {

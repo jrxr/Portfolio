@@ -139,8 +139,7 @@ export const Content = styled.div`
   }
 
   @media (max-width: 500px) {
-    height: 60vh;
-    max-width: 500px;
+    height: 68vh;
   }
 `;
 
