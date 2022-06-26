@@ -37,18 +37,60 @@ export const ConhecimentoContainer = styled.div`
     text-transform: uppercase;
   }
 
+  .htmlsvg {
+    &:hover {
+      color: #f77f00;
+      transform: scale(1.2);
+    }
+  }
+
+  .htmlsvg {
+    &:hover {
+      color: #f77f00;
+      transform: scale(1.2);
+    }
+  }
+
+  .csssvg {
+    &:hover {
+      color: #0077b6;
+      transform: scale(1.2);
+    }
+  }
+
+  .javascript {
+    &:hover {
+      color: #ffea00;
+      transform: scale(1.2);
+    }
+  }
+
+  .react {
+    &:hover {
+      color: #ade8f4;
+      transform: scale(1.2);
+    }
+  }
+
+  .swift {
+    &:hover {
+      color: #ff9e00;
+      transform: scale(1.2);
+    }
+  }
+
+  .node {
+    &:hover {
+      color: #38b000;
+      transform: scale(1.2);
+    }
+  }
+
   svg {
     width: 6.5rem;
     height: 6.5rem;
     color: ${({ theme }) => theme.secondary};
     transition: 0.3s;
-  }
-
-  &:hover {
-    svg {
-      color: ${({ theme }) => theme.primary};
-      transform: scale(0.95);
-    }
   }
 
   @media (max-width: 1000px) {

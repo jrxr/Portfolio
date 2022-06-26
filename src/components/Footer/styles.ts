@@ -28,16 +28,33 @@ export const Container = styled.footer`
       align-items: center;
       gap: 1rem;
 
+      .whatsapp {
+        &:hover {
+          color: ${({ theme }) => theme.success};
+          transform: scale(1.2);
+        }
+      }
+
+      .github {
+        &:hover {
+          color: ${({ theme }) => theme.secondary};
+          transform: scale(1.2);
+        }
+      }
+
+      .linkedin {
+        &:hover {
+          color: #0e76a8;
+          transform: scale(1.2);
+        }
+      }
+
       svg {
         width: 2rem;
         height: 2rem;
         color: ${({ theme }) => theme.text};
         transition: 0.5s;
         cursor: pointer;
-
-        &:hover {
-          color: ${({ theme }) => theme.primary};
-        }
       }
     }
 

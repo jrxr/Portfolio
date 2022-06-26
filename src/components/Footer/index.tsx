@@ -23,6 +23,7 @@ function Footer() {
         </button>
         <section>
           <FaWhatsappSquare
+            className="whatsapp"
             onClick={() =>
               handleRedirect(
                 'https://api.whatsapp.com/send?phone=5561982029144&text='
@@ -30,9 +31,11 @@ function Footer() {
             }
           />
           <AiOutlineGithub
+            className="github"
             onClick={() => handleRedirect('https://github.com/jrxr')}
           />
           <AiFillLinkedin
+            className="linkedin"
             onClick={() =>
               handleRedirect('https://www.linkedin.com/in/agacyjunior/')
             }

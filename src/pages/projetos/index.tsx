@@ -1,6 +1,8 @@
 import Prismic from '@prismicio/client';
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
+import { useEffect } from 'react';
+import Aos from 'aos';
 import Header from '../../components/Header';
 import ProjetoItem from '../../components/ProjetoItem';
 import { getPrismicClient } from '../../services/prismic';
@@ -22,6 +24,10 @@ interface ProjetoProps {
 }
 
 export default function Projetos({ projetos }: ProjetoProps) {
+  useEffect(() => {
+    Aos.init({ duration: 1500 });
+  }, []);
+
   return (
     <ProjetosContainer>
       <Head>

@@ -12,12 +12,18 @@ function Conhecimentos() {
     <Container>
       <SectionTitle title=" Conhecimentos" />
       <section>
-        <ConhecimentoItem title="HTML" icon={<AiFillHtml5 />} />
-        <ConhecimentoItem title="CSS" icon={<FaCss3Alt />} />
-        <ConhecimentoItem title="JavaScript" icon={<IoLogoJavascript />} />
-        <ConhecimentoItem title="React" icon={<FaReact />} />
-        <ConhecimentoItem title="Swift" icon={<FaSwift />} />
-        <ConhecimentoItem title="NodeJS" icon={<FaNodeJs />} />
+        <ConhecimentoItem
+          title="HTML"
+          icon={<AiFillHtml5 className="htmlsvg" />}
+        />
+        <ConhecimentoItem title="CSS" icon={<FaCss3Alt className="csssvg" />} />
+        <ConhecimentoItem
+          title="JavaScript"
+          icon={<IoLogoJavascript className="javascript" />}
+        />
+        <ConhecimentoItem title="React" icon={<FaReact className="react" />} />
+        <ConhecimentoItem title="Swift" icon={<FaSwift className="swift" />} />
+        <ConhecimentoItem title="NodeJS" icon={<FaNodeJs className="node" />} />
       </section>
     </Container>
   );
