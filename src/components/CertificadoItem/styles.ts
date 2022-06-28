@@ -9,36 +9,36 @@ export const Container = styled.div<ContainerProps>`
     position: relative;
     width: 100%;
     background: url(${props => props.imgUrl}) no-repeat center;
-    background-size: cover;
-    height: 10rem;
-    padding: 1.5rem;
+    background-size: 70%;
+    height: 42rem;
+    padding: 1rem;
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     border: 1px solid ${({ theme }) => theme.border};
     transition: 0.5s;
     cursor: pointer;
     overflow: hidden;
 
     &:hover {
-      border-color: ${({ theme }) => theme.primary};
+      border-color: ${({ theme }) => theme.success};
 
       > div.overlay {
-        opacity: 0.5;
+        opacity: 0.4;
       }
       > section {
         h1 {
-          color: ${({ theme }) => theme.secondary};
+          color: ${({ theme }) => theme.success};
         }
         h2 {
-          color: ${({ theme }) => theme.secondary};
+          color: ${({ theme }) => theme.success};
         }
       }
     }
 
     > section {
-      z-index: 2;
+      z-index: 1;
       h1 {
         color: ${({ theme }) => theme.textLight};
         font-size: 1.5rem;

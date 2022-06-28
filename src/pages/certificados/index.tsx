@@ -3,7 +3,7 @@ import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Header from '../../components/Header';
 import { getPrismicClient } from '../../services/prismic';
-import { ProjetosContainer } from '../../styles/ProjetosStyles';
+import { CertificadosContainer } from '../../styles/CertificadosStyles';
 
 import CertificadoItem from '../../components/CertificadoItem';
 
@@ -20,12 +20,12 @@ interface CertificadosProps {
 
 export default function Certificados({ certificados }: CertificadosProps) {
   return (
-    <ProjetosContainer>
+    <CertificadosContainer>
       <Head>
         <title>Certificados | Meu portfólio</title>
         <meta
           name="description"
-          content="Aqui você encontra os projetos que eu desenvolvi."
+          content="Aqui você encontra os meus certificados."
         />
         <meta property="og:image" content="/ogimage.png" />
         <meta property="og:image:secure_url" content="/ogimage.png" />
@@ -33,7 +33,7 @@ export default function Certificados({ certificados }: CertificadosProps) {
         <meta name="twitter:image:src" content="/ogimage.png" />
         <meta
           property="og:description"
-          content="Aqui você encontra os projetos que eu desenvolvi."
+          content="Aqui você encontra os meus certificados."
         />
       </Head>
 
@@ -48,7 +48,7 @@ export default function Certificados({ certificados }: CertificadosProps) {
           />
         ))}
       </main>
-    </ProjetosContainer>
+    </CertificadosContainer>
   );
 }
 

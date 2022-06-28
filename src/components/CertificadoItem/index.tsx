@@ -1,17 +1,14 @@
-// import Link from 'next/link';
 import { Container } from './styles';
 
 interface CertificadoItemProps {
   title: string;
   type: string;
   imgUrl: string;
-  // slug: string;
 }
 
 function CertificadoItem({ title, type, imgUrl }: CertificadoItemProps) {
   return (
-    <Container imgUrl={imgUrl} data-aos="fade-right">
-      {/* <Link href={`/projetos/${slug}`}> */}
+    <Container imgUrl={imgUrl}>
       <a>
         <div className="overlay" />
         <section>
@@ -19,7 +16,6 @@ function CertificadoItem({ title, type, imgUrl }: CertificadoItemProps) {
           <h2>{type}</h2>
         </section>
       </a>
-      {/* </Link> */}
     </Container>
   );
 }
