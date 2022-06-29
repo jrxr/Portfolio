@@ -9,8 +9,8 @@ export const Container = styled.div<ContainerProps>`
     position: relative;
     width: 100%;
     background: url(${props => props.imgUrl}) no-repeat center;
-    background-size: 70%;
-    height: 42rem;
+    background-size: 100%;
+    height: 45rem;
     padding: 1rem;
     display: flex;
     align-items: flex-end;
@@ -59,6 +59,16 @@ export const Container = styled.div<ContainerProps>`
       background: ${({ theme }) => theme.gradient};
       opacity: 0.7;
       transition: 0.5s;
+    }
+
+    @media (max-width: 1000px) {
+      background-size: 100%;
+      height: 32rem;
+    }
+
+    @media (max-width: 550px) {
+      background-size: 100%;
+      height: 14rem;
     }
   }
 `;
