@@ -11,7 +11,6 @@ export const CertificadosContainer = styled.div`
     margin-bottom: 5rem;
     width: 100%;
     gap: 1.5rem;
-
     img {
       width: 100%;
       height: 100%;
