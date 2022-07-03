@@ -57,7 +57,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const projectResponse = await prismic.query<ICertificados>(
     [Prismic.Predicates.at('document.type', 'certificados')],
-    { orderings: '[document.first_publication_date desc]' }
+    { orderings: '[document.first_publication_date]' }
   );
 
   const certificados = projectResponse.results.map(certificado => ({

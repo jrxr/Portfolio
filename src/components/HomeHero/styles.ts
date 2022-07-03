@@ -9,8 +9,7 @@ export const Container = styled.section`
   margin-top: 4rem;
 
   > img {
-    width: 45rem;
-    height: 50rem;
+    object-fit: cover;
     flex: 1;
   }
 

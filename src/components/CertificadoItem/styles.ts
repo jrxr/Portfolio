@@ -9,36 +9,39 @@ export const Container = styled.div<ContainerProps>`
     position: relative;
     width: 100%;
     background: url(${props => props.imgUrl}) no-repeat center;
-    background-size: 100%;
-    height: 45rem;
-    padding: 1rem;
+    background-size: cover;
+    height: 30rem;
+    padding: 1.5rem;
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
-    border-radius: 1rem;
-    border: 1px solid ${({ theme }) => theme.border};
-    transition: 0.5s;
+    border-radius: 0.7rem;
+    border: 5px solid ${({ theme }) => theme.border};
+    transition: 0.7s;
     cursor: pointer;
     overflow: hidden;
 
     &:hover {
       border-color: ${({ theme }) => theme.success};
+      -moz-transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
 
       > div.overlay {
-        opacity: 0.4;
+        opacity: 0.1;
       }
       > section {
         h1 {
-          color: ${({ theme }) => theme.success};
+          color: transparent;
         }
         h2 {
-          color: ${({ theme }) => theme.success};
+          color: transparent;
         }
       }
     }
 
     > section {
-      z-index: 1;
+      z-index: 2;
       h1 {
         color: ${({ theme }) => theme.textLight};
         font-size: 1.5rem;
@@ -46,7 +49,7 @@ export const Container = styled.div<ContainerProps>`
       h2 {
         color: ${({ theme }) => theme.textLight};
         font-size: 1rem;
-        font-weight: 300;
+        font-weight: 500;
       }
     }
 
@@ -57,18 +60,8 @@ export const Container = styled.div<ContainerProps>`
       width: 100%;
       height: 100%;
       background: ${({ theme }) => theme.gradient};
-      opacity: 0.7;
-      transition: 0.5s;
-    }
-
-    @media (max-width: 1000px) {
-      background-size: 100%;
-      height: 32rem;
-    }
-
-    @media (max-width: 550px) {
-      background-size: 100%;
-      height: 14rem;
+      opacity: 0.9;
+      transition: 0.7s;
     }
   }
 `;
