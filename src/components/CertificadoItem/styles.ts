@@ -63,5 +63,13 @@ export const Container = styled.div<ContainerProps>`
       opacity: 0.9;
       transition: 0.7s;
     }
+
+    @media (max-width: 1000px) {
+      height: 20rem;
+    }
+
+    @media (max-width: 550px) {
+      height: 15rem;
+    }
   }
 `;
