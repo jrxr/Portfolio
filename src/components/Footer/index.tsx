@@ -21,6 +21,7 @@ function Footer() {
         <button type="button" onClick={handleScrollTop}>
           Voltar ao topo
         </button>
+        <h1>Feito com 💙 by Agacy Júnior 💻</h1>
         <section>
           <FaWhatsappSquare
             className="whatsapp"

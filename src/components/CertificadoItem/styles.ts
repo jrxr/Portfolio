@@ -15,7 +15,7 @@ export const Container = styled.div<ContainerProps>`
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
-    border-radius: 0.7rem;
+    border-radius: 1rem;
     border: 5px solid ${({ theme }) => theme.border};
     transition: 0.7s;
     cursor: pointer;

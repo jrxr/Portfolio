@@ -23,6 +23,13 @@ export const Container = styled.footer`
       font-size: 1.2rem;
     }
 
+    h1 {
+      color: ${({ theme }) => theme.success};
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+
     > section {
       display: flex;
       align-items: center;
@@ -61,6 +68,11 @@ export const Container = styled.footer`
     @media (max-width: 450px) {
       button {
         font-size: 0.9rem;
+      }
+
+      h1 {
+        color: transparent;
+        font-size: 0.2rem;
       }
 
       > section {

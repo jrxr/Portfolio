@@ -6,6 +6,7 @@ import { getPrismicClient } from '../../services/prismic';
 import { CertificadosContainer } from '../../styles/CertificadosStyles';
 
 import CertificadoItem from '../../components/CertificadoItem';
+import Footer from '../../components/Footer';
 
 interface ICertificados {
   slug: string;
@@ -48,6 +49,7 @@ export default function Certificados({ certificados }: CertificadosProps) {
           />
         ))}
       </main>
+      <Footer />
     </CertificadosContainer>
   );
 }
