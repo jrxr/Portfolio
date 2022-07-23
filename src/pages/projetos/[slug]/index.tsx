@@ -47,7 +47,7 @@ export default function Projeto({ projeto }: ProjetoProps) {
       <main>
         <p>{projeto.description}</p>
 
-        {projeto.type === 'App' ? (
+        {projeto.type === 'App' && projeto.link !== 'https://null' ? (
           <>
             <br />
             <p>
@@ -70,10 +70,13 @@ export default function Projeto({ projeto }: ProjetoProps) {
         ) : (
           <></>
         )}
-
-        <button type="submit">
-          <a href={`${projeto.link}`}>Ver projeto online</a>
-        </button>
+        {projeto.link !== 'https://null' ? (
+          <button type="submit">
+            <a href={`${projeto.link}`}>Ver projeto online</a>
+          </button>
+        ) : (
+          <></>
+        )}
 
         <button type="button">
           <a href={`${projeto.github}`}>Ver código projeto</a>
