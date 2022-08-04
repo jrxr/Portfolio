@@ -9,6 +9,11 @@ function Experiencias() {
 
       <section>
         <ExperienciaItem
+          year="2022"
+          title="Dev Mobile"
+          description="Responsável pelo desenvolvimento mobile utilizando React-Native."
+        />
+        <ExperienciaItem
           year="2021"
           title="Dev Mobile"
           description="Responsável pelo desenvolvimento mobile utilizando React-Native, converter arquivos javascript para typescript e desenvolvimento de novas funcionalidades para o aplicativo."
