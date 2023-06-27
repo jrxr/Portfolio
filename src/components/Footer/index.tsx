@@ -1,5 +1,5 @@
 import { AiOutlineGithub, AiFillLinkedin } from 'react-icons/ai';
-import { FaWhatsappSquare } from 'react-icons/fa';
+import { FaWhatsappSquare, FaRegFilePdf } from 'react-icons/fa';
 
 import { Container } from './styles';
 
@@ -39,6 +39,14 @@ function Footer() {
             className="linkedin"
             onClick={() =>
               handleRedirect('https://www.linkedin.com/in/agacyjunior/')
+            }
+          />
+          <FaRegFilePdf
+            className="curriculum"
+            onClick={() =>
+              handleRedirect(
+                'https://drive.google.com/file/d/1g8adIf2jywuq8D7Kvr05iLwgCjDGfuTI/view?usp=sharing'
+              )
             }
           />
         </section>

@@ -56,6 +56,14 @@ export const Container = styled.footer`
         }
       }
 
+      .curriculum {
+        width: 12%;
+        &:hover {
+          color: #576cbc;
+          transform: scale(1.2);
+        }
+      }
+
       svg {
         width: 2rem;
         height: 2rem;

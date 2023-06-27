@@ -5,13 +5,12 @@ interface ProjetoItemProps {
   title: string;
   type: string;
   imgUrl: string;
-  slug: string;
 }
 
-function ProjetoProgress({ title, type, imgUrl, slug }: ProjetoItemProps) {
+function ProjetoProgress({ title, type, imgUrl }: ProjetoItemProps) {
   return (
     <Container imgUrl={imgUrl} data-aos="fade-right">
-      <Link href={`/projetos/${slug}`}>
+      <Link href="/projetos/">
         <a>
           <div className="overlay" />
           <section>

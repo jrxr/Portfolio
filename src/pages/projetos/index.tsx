@@ -49,7 +49,6 @@ export default function Projetos({ projetos }: ProjetoProps) {
       <Header />
       <main className="container">
         <ProjetoProgress
-          slug="jogo"
           title="Mais projetos "
           type="em breve"
           imgUrl={picture}

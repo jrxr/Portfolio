@@ -32,7 +32,7 @@ function HomeHero() {
               <span className="blue"> Developer Front-end and Mobile,</span>
             </div>
             <div>
-              Nível: <span className="blue">Júnior</span>
+              Nível: <span className="blue">Pleno</span>
             </div>
             {'\u007D'}
           </CodeItem>

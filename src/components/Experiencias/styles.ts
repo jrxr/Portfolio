@@ -28,25 +28,31 @@ export const ItemContainer = styled.div`
     background: ${({ theme }) => theme.gradient};
     padding: 1rem;
     padding-top: 2.5rem;
-    height: 20rem;
+    height: 100%;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
 
-    max-width: 19rem;
+    max-width: 20rem;
 
     transition: 0.5s;
 
     h1 {
       color: ${({ theme }) => theme.primary};
-      font-size: 2rem;
+      font-size: 1.2rem;
       margin-bottom: 1.5rem;
+
+      p {
+        color: ${({ theme }) => theme.primary};
+        font-size: 1rem;
+      }
     }
 
     h2 {
       color: ${({ theme }) => theme.secondary};
-      font-size: 1.5rem;
+      font-size: 1rem;
       font-weight: 300;
       margin-bottom: 1rem;
     }
@@ -60,7 +66,7 @@ export const ItemContainer = styled.div`
 
   &:hover > div {
     filter: brightness(1.3);
-    transform: translateY(-20px);
+    transform: translateY(-50px);
   }
 
   &:nth-child(even) > div {

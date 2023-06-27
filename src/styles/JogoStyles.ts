@@ -179,9 +179,9 @@ export const CloudsTwo = styled.img`
 
 export const Pipe = styled.img`
   position: absolute;
-  width: 65px;
+  width: 70px;
   bottom: 0;
-  right: 10px;
+  right: -10px;
 `;
 
 export const Mario = styled.img`
